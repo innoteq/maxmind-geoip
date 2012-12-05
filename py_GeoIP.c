@@ -22,6 +22,11 @@
 #include "GeoIP.h"
 #include "GeoIPCity.h"
 
+/* Workaround to build it on Ubuntu Lucid */
+#define GEOIP_UNKNOWN_CONF ( 0x7f )
+#define GEOIP_UNKNOWN_ACCURACY_RADIUS ( 0x3ff )
+/* end of workaround */
+
 staticforward PyTypeObject GeoIP_GeoIPType;
 
 /* Exception object for python */
